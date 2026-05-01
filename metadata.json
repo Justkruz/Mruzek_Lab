@@ -1,0 +1,12 @@
+{
+  "name": "Searching for the Sound: 2026 DAW",
+  "description": "A professional-grade in-house DAW with virtual instruments, multi-track sequencing, real-time effects routing, and cloud-based collaboration.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "audio_synthesis",
+    "realtime_collaboration",
+    "cloud_storage"
+  ]
+}

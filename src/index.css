@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-retro: "Press Start 2P", system-ui;
+}
+
+@keyframes rotate-phone {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-90deg); }
+  100% { transform: rotate(-90deg); }
+}
+
+.animate-rotate-phone {
+  animation: rotate-phone 2s ease-in-out infinite;
+}
+
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-slate-100 font-sans;
+  }
+}
+
+.glass {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.neon-cyan {
+  text-shadow: 0 0 15px #22d3ee;
+}
+
+.neon-fuchsia {
+  text-shadow: 0 0 15px #f0abfc;
+}
+
+.step {
+  @apply transition-all duration-75;
+}
+
+.step.active {
+  @apply bg-cyan-400 text-black shadow-[0_0_12px_#22d3ee];
+}
+
+.step.current {
+  @apply border-2 border-yellow-400;
+}
+
+.key {
+  @apply transition-all duration-75 select-none cursor-pointer;
+}
+
+.key.white {
+  @apply bg-slate-100 text-slate-900;
+}
+
+.key.black {
+  @apply bg-slate-900 text-cyan-400;
+}
+
+.key.pressed {
+  @apply bg-cyan-400! text-black! scale-95;
+}
